@@ -17,7 +17,7 @@ def translate(w):
         if que == 'y':
             return data[get_close_matches(w,data.keys())[0]]
         elif que == 'n':
-            return 'Word does not exist..! please double check.'
+            return 'Word does not exist..! please double check.1'
         else:
             return "We can't understand your entry.."
     else:
@@ -27,9 +27,10 @@ word = raw_input("Enter a Word: ").lower()
 
 # step:3
 output = translate(word)
+
 # step:5
 if type(output) == list:
     for i in output:
         print i
 else:
-    print i
+    print output

@@ -1,0 +1,42 @@
+Goal:
+    To write a python script that blocks a list of websites during working hours(8-16)
+and unblock those websites after working hours.
+
+Requirement:
+
+    system: Linux
+    
+    python 2 (or) 3
+    
+    Modules:
+        time
+        datetime
+
+    variables:
+        root_file_path
+        website_list
+        redirect
+
+    condition:
+        Endless loop (to run python all time)
+            condition for working hours
+                open file in read & write mode
+                    read the file and store it in a variable
+                    Iterate the website_list
+                        If website in file(content)
+                            pass
+                        else
+                            write the website to the file
+
+            condition for Fun hours
+                open the file in read & write mode
+                    read each line in the file and store that array in a variable
+                        initially the curser is in the end of the content, we have to move the curser point to the begning of the line inorder to read the file from top-bottom
+                            iterate each line in file
+                                remove website that are blocked
+                                    write a file without the websites in the website_list
+                    overwriting the existing file to avoid duplication               
+
+
+
+
